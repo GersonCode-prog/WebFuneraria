@@ -1,32 +1,59 @@
 /* Estilos generales */
 body {
    font-family: Arial, sans-serif;
-   background-color: #f5f5f5;
+   background-color: #333232;
    margin: 0;
    padding: 0;
 }
 
-header {
-   background-color: #333;
-   color: #fff;
-   text-align: center;
-   padding: 20px;
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #ccc; /* Color de fondo gris para el área del encabezado */
+  padding: 10px; /* Ajusta el espacio interno */
 }
+ 
+ .logo {
+   /* Ajustar el tamaño del logo según lo necesites */
+   width: 150px;
+   height: 150px;
+   margin-right: 400px; /* Espacio entre el logo y el contenido */
+ }
+ 
+ .logo img {
+   width: 100%; /* Para asegurarse de que el logo no se salga del contenedor */
+ }
+ 
+ .header-content {
+   flex: 100; /* El contenido ocupa todo el espacio restante */
+ }
+ 
+ /* Ajustes para el contenido (título y menú) */
+ .header-content h1 {
+   margin: 100; /* Elimina el margen predeterminado */
+ }
+ 
+ nav {
+   margin-right: auto; /* Mueve el menú a la izquierda */
+   background-color: #ccc; /* Color de fondo gris para el menú */
+   font-size: 18px; /* Tamaño de fuente más grande */
+   padding: 10px; /* Ajusta el espacio interno */
+ }
 
 nav ul {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-   display: inline;
-   margin-right: 20px;
+  margin-right: 40px;
 }
 
 nav a {
-   text-decoration: none;
-   color: #fff;
+  text-decoration: none;
+  color: #333; /* Cambia el color de los enlaces */
 }
 
 /* Estilos para el control deslizante */
@@ -39,24 +66,6 @@ nav a {
    padding: 20px;
    background-color: #fff;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos para la sección de contacto */
-#contact {
-   max-width: 800px;
-   margin: 20px auto;
-   padding: 20px;
-   background-color: #fff;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#contact ul {
-   list-style-type: none;
-   padding: 0;
-}
-
-#contact li {
-   margin-bottom: 10px;
 }
 
 
@@ -381,3 +390,221 @@ nav a {
    box-shadow: 0 0 0 0.2rem rgba(158, 138, 104, 0.5);
 
  }
+/* Estilos generales */
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #725151;
+}
+
+.container {
+   width: 80%;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+.row {
+   display: flex;
+}
+
+.col-lg-6 {
+   width: 50%;
+   padding: 20px;
+   box-sizing: border-box;
+}
+
+.image-column {
+   min-height: 500px;
+}
+
+.image-container {
+   position: relative;
+   overflow: hidden;
+   border-radius: 8px;
+}
+
+.image-container img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.feature-text {
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 8px;
+}
+
+.feature-text h6 {
+   text-transform: uppercase;
+}
+
+.feature-text h1 {
+   margin-bottom: 20px;
+}
+
+.feature-item {
+   display: flex;
+   margin-bottom: 20px;
+}
+
+.feature-number {
+   border: 2px solid #000;
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+   margin-right: 20px;
+}
+
+.feature-item h3 {
+   margin: 0;
+}
+
+.contacto{
+   background-image: url(img/contact_bg.png);
+   background-color: #1e2326;
+   color: #fff;
+   padding: 50px 0;
+}
+.contacto .contenido-seccion{
+   max-width: 1100px;
+   margin: auto;
+}
+.contacto h2{
+   font-size: 48px;
+   font-family: 'Righteous';
+   text-align: center;
+   padding: 20px 0;
+}
+.contacto .fila{
+   display: flex;
+}
+.contacto .col{
+   width: 50%;
+   padding: 10px;
+   position: relative;
+}
+.contacto .col input, .contacto .col textarea{
+   display: block;
+   width: 100%;
+   padding: 18px;
+   border: none;
+   margin-bottom: 20px;
+   background-color: #252A2E;
+   color: #fff;
+   font-size: 18px;
+}
+.contacto button{
+   cursor: pointer;
+   background-color: transparent;
+   border: 2px solid #fff;
+   width: fit-content;
+   display: block;
+   margin: 20px auto;
+   padding: 10px 22px;
+   font-size: 16px;
+   color: #fff;
+   position: relative;
+   z-index: 10;
+}
+.contacto button .overlay{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background-color: #1CB698;
+   z-index: -1;
+   transition: 1s;
+}
+.contacto button:hover .overlay{
+   width: 100%;
+}
+.contacto .col img{
+   width: 100%;
+}
+.contacto .col .info{
+   position: absolute;
+   top: 40%;
+   background-color: #252A2E;
+   padding: 20px;
+   max-swidth: 350px;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.contacto .col .info ul{
+   list-style: none;
+}
+.contacto .col .info ul li{
+   margin-bottom: 20px;
+}
+.contacto .col .info ul li i{
+   color: #1CB698;
+   display: inline-block;
+   margin-right: 20px;
+}
+footer{
+   background-color: #252A2E;
+   color: #fff;
+   padding: 50px 0 30px 0;
+   text-align: center;
+   position: relative;
+   width: 100%;
+}
+footer .redes{
+   margin-bottom: 20px;
+}
+footer .redes a{
+   color: #fff;
+   display: inline-block;
+   text-decoration: none;
+   border: 1px solid #fff;
+   border-radius: 100%;
+   width: 42px;
+   height: 42px;
+   line-height: 42px;
+   margin: 40px 5px;
+   font-size: 20px;
+   transition: .3s;
+}
+footer .arriba{
+   display: block;
+   width: 50px;
+   height: 50px;
+   background-color: #1CB698;
+   color: #fff;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   top: -25px;
+   border-radius: 50%;
+   line-height: 50px;
+   font-size: 18px;
+}
+/* Para dispositivos más pequeños, como tablets y teléfonos */
+@media (max-width: 767px) {
+   .row {
+       display: flex;
+       flex-direction: column;
+   }
+
+   .col-lg-6 {
+       width: 100%;
+       padding: 20px 0;
+   }
+
+   .image-container {
+       min-height: 300px; /* o algún otro valor que se vea mejor en pantallas más pequeñas */
+   }
+
+   .feature-text {
+       padding: 10px;
+   }
+
+   .feature-item {
+       margin-bottom: 15px;
+   }
+}
