@@ -1,88 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios Funerarios</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <style>
+        /* Estilos generales */
+        /* Estilos generales */
+/* Estilos generales */
+      body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-size: 16px; /* Ajusta el tamaño del texto según tus preferencias */
+}
+
+/* Estilos para la sección de servicios */
+.servicio {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    font-size: 22px; /* Ajusta el tamaño del texto dentro de las secciones de servicio */
+}
+
+
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin-right: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700; /* Color amarillo al pasar el mouse sobre el enlace */
+        }
+
+        /* Estilos para la galería de imágenes */
+        .galeria-servicio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .galeria-servicio img {
+            width: 100%; /* Ocupar el 100% del ancho en dispositivos móviles */
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .galeria-servicio img:hover {
+            transform: scale(1.1);
+        }
+
+        .imagen-ampliada {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .imagen-ampliada img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        /* Estilos para la sección de servicios */
+        .servicio {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #ddd; /* Línea para separar servicios */
+            padding-bottom: 20px; /* Espaciado inferior para mejorar la apariencia */
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            margin-top: 40px;
+        }
+
+        /* Otros estilos según sea necesario */
+
+        /* Estilos específicos para tablets (mayor a 600px) */
+        @media screen and (min-width: 600px) {
+            .galeria-servicio img {
+                width: 48%; /* Dos imágenes por fila en tablets */
+            }
+        }
+
+        /* Estilos específicos para dispositivos mayores a 768px (tablets y pequeñas pantallas de escritorio) */
+        @media screen and (min-width: 768px) {
+            .galeria-servicio img {
+                width: 31%; /* Tres imágenes por fila en dispositivos mayores a 768px */
+            }
+        }
+    </style>
 </head>
 <body>
-   <body>
-      <nav class="navbar">
-         <h1 class="logo">Funeraria San Jose</h1>
-         <ul class="nav-links">
-             <li class="active"><a href="index.html">Inicio</a></li>
-             <li><a href="#">Servicios</a></li>
-             <li><a href="#">Lápidas</a></li>
-             <li><a href="#" class="ctn">Contáctanos</a></li>
-             <div class="redes">
-                 <a href="https://www.facebook.com/p/Funerales-Y-Capillas-San-Jos%C3%A9-Taxisco-100057131872826/?paipv=0&eav=AfbXF9cakCZcnUR-uzMhfUGVVWAtN8TyIH9PtLk39FdBPyIwdPt0GWWoSpiVc0z8pPw&_rdr"><i class="fa-brands fa-facebook-f"></i></a>
-                 <a href="https://wa.me/50258533820"><i class="fa-brands fa-whatsapp"></i></a>
-                 <a href="https://wa.me/50256153984"><i class="fa-brands fa-whatsapp"></i></a>
-             </div>
-         </ul>
-         <img src="img/menu-btn.png" alt="" class="menu-btn">
-     </nav>
- 
-     
-    <section id="tipo-servicios">
-        <!-- Servicio 1 -->
-        <div id="slider">
-            <input type="radio" name="slider" id="slide1" checked>
-            <input type="radio" name="slider" id="slide2">
-            <input type="radio" name="slider" id="slide3">
-            <input type="radio" name="slider" id="slide4">
-            <div id="slides">
-               <div id="overflow">
-                  <div class="inner">
-                     <div class="slide slide_1">
-                        <div class="slide-content">
-                            <img src="img/servicio1.jpg" alt="Imagen 1">
-                           <p>Content for Slide 1</p>
-                        </div>
-                     </div>
-                     <div class="slide slide_2">
-                        <div class="slide-content">
-                           <img src="img/servicio1.jpg" alt="Imagen 1">
-                           <h2>Slide 2</h2>
-                           <p>Content for Slide 2</p>
-                        </div>
-                     </div>
-                     <div class="slide slide_3">
-                        <div class="slide-content">
-                           <img src="img/servicio3.jpg" alt="Imagen 1">
-                           <h2>Slide 3</h2>
-                           <p>Content for Slide 3</p>
-                        </div>
-                     </div>
-                     <div class="slide slide_4">
-                        <div class="slide-content">
-                           <img src="img/servicio4.jpg" alt="Imagen 1">
-                           <h2>Slide 4</h2>
-                           <p>Content for Slide 4</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Servicios Funerarios</h1>
+
+        <nav>
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="lapidas.html">Lápidas</a>
+      </nav>
+    
+    </header>
+   
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Sección de Servicio 1 -->
+        <section class="servicio">
+            <h2>Servicio 1: Servicio Basico</h2>
+
+            <!-- Galería de imágenes relacionadas con el servicio -->
+            <div class="galeria-servicio">
+                <img src="img/capilla.png" alt="Descripción de la imagen 1" onclick="mostrarImagenAmpliada('img/capilla.png')">
+                <img src="img/capilla.png" alt="Descripción de la imagen 2" onclick="mostrarImagenAmpliada('img/capilla.png')">
+                <img src="img/capilla.png" alt="Descripción de la imagen 3" onclick="mostrarImagenAmpliada('img/capilla.png')">
+                
             </div>
-            <div id="controls">
-               <label for="slide1"></label>
-               <label for="slide2"></label>
-               <label for="slide3"></label>
-               <label for="slide4"></label>
+
+            <!-- Detalles del Servicio -->
+            <p>Descripción: este servicio incluye una caja (cajoncito) </p>
+            <ul>
+              <p>Que Incluye: </p>
+                <li>100 Sillas</li>
+                <li>100 panes</li>
+                <li>1 toldo</li>
+            </ul>
+            <p>Extras: Este servicio tambien incluye el entierro</p>
+        </section>
+
+        <!-- Sección de Servicio 2 -->
+        <section class="servicio">
+            <h2>Servicio 2: Otro Servicio</h2>
+
+            <!-- Galería de imágenes relacionadas con el servicio -->
+            <div class="galeria-servicio">
+                <img src="img/capillas.jpg" alt="Descripción de la otra imagen 1" onclick="mostrarImagenAmpliada('img/capillas.jpg')">
+                <img src="img/capillas.jpg" alt="Descripción de la otra imagen 2" onclick="mostrarImagenAmpliada('img/capillas.jpg')">
+                <img src="img/capillas.jpg" alt="Descripción de la otra imagen 3" onclick="mostrarImagenAmpliada('img/capillas.jpg')">
+               
             </div>
-            <div id="bullets">
-               <label for="slide1"></label>
-               <label for="slide2"></label>
-               <label for="slide3"></label>
-               <label for="slide4"></label>
-            </div>
-            <div class="contenido">
-                <h2>Servicio Basico</h2>
-                <p>Precio: Q 11,500</p>
-                <p>Incluye: Cremación, urna estándar, asesoramiento familiar.</p>
-            </div>
-         </div>
-        <!-- Agregar más tarjetas de servicios aquí -->
-    </section>
-    <script src="script.js"></script>
+
+            <!-- Detalles del Servicio -->
+            <p>Descripción detallada del Servicio 2...</p>
+            <ul>
+                <li>Punto clave 1</li>
+                <li>Punto clave 2</li>
+                <li>Punto clave 3</li>
+            </ul>
+            <p>Costos, duración, y cualquier otra información relevante.</p>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <!-- Información de contacto, enlaces adicionales, etc. -->
+    </footer>
+
+    <!-- Sección para la imagen ampliada -->
+    <div class="imagen-ampliada" onclick="cerrarImagenAmpliada()">
+        <img id="imagen-ampliada-src" src="" alt="Imagen ampliada">
+    </div>
+
+    <script>
+        function mostrarImagenAmpliada(src) {
+            document.getElementById('imagen-ampliada-src').src = src;
+            document.querySelector('.imagen-ampliada').style.display = 'flex';
+        }
+
+        function cerrarImagenAmpliada() {
+            document.querySelector('.imagen-ampliada').style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,195 @@
+<!-- lapidas.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lápidas</title>
+    
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            font-size: 16px;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples líneas */
+            justify-content: space-between; /* Distribuye el espacio entre las tarjetas */
+        }
+
+        /* Estilos para las tarjetas de lápidas */
+        .tarjeta {
+            width: calc(100% - 5px); /* Calcula el ancho de la tarjeta para ocupar la mitad del contenedor con un espacio de 10px entre ellas */
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .tarjeta:hover {
+            transform: scale(1.05);
+        }
+
+        .imagen-lapida {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            max-height: 300px; /* Ajuste la altura máxima según sea necesario */
+            cursor: pointer; /* Cambia el cursor al hacer clic */
+        }
+
+        .detalles-lapida {
+            padding: 20px;
+        }
+
+        /* Estilos para la sección de lápidas */
+        .lapida {
+            margin-bottom: 40px;
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            margin-top: 40px;
+        }
+
+        /* Estilos para el nav */
+        nav {
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin-right: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700; /* Color amarillo al pasar el mouse sobre el enlace */
+        }
+
+        /* Estilos para la imagen ampliada */
+        .imagen-ampliada {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imagen-ampliada img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 5px solid #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Lápidas</h1>
+
+        <!-- Enlaces de navegación -->
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="lapidas.html">Lápidas</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Sección de Lápida 1 -->
+        <section class="lapida">
+            <div class="tarjeta">
+                <img class="imagen-lapida" src="img/lapida.jpg" alt="Descripción de la lápida 1" onclick="mostrarImagenAmpliada('img/lapida.jpg')">
+                <div class="detalles-lapida">
+                    <h2>Lápida 1: Descripción breve</h2>
+                    <p>Descripción detallada de la lápida 1...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Lápida 2 (puedes agregar más tarjetas según sea necesario) -->
+        <section class="lapida">
+            <div class="tarjeta">
+                <img class="imagen-lapida" src="img/lapida.jpg" alt="Descripción de la lápida 2" onclick="mostrarImagenAmpliada('img/lapida.jpg')">
+                <div class="detalles-lapida">
+                    <h2>Lápida 2: Descripción breve</h2>
+                    <p>Descripción detallada de la lápida 2...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lapida">
+            <div class="tarjeta">
+                <img class="imagen-lapida" src="img/lapida.jpg" alt="Descripción de la lápida 1" onclick="mostrarImagenAmpliada('img/lapida.jpg')">
+                <div class="detalles-lapida">
+                    <h2>Lápida 1: Descripción breve</h2>
+                    <p>Descripción detallada de la lápida 1...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Lápida 2 (puedes agregar más tarjetas según sea necesario) -->
+        <section class="lapida">
+            <div class="tarjeta">
+                <img class="imagen-lapida" src="img/lapida.jpg" alt="Descripción de la lápida 2" onclick="mostrarImagenAmpliada('img/lapida.jpg')">
+                <div class="detalles-lapida">
+                    <h2>Lápida 2: Descripción breve</h2>
+                    <p>Descripción detallada de la lápida 2...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <!-- Información de contacto, enlaces adicionales, etc. -->
+    </footer>
+
+    <!-- Sección para la imagen ampliada -->
+    <div class="imagen-ampliada" onclick="cerrarImagenAmpliada()">
+        <img id="imagen-ampliada-src" src="" alt="Imagen ampliada">
+    </div>
+
+    <script>
+        function mostrarImagenAmpliada(src) {
+            document.getElementById('imagen-ampliada-src').src = src;
+            document.querySelector('.imagen-ampliada').style.display = 'flex';
+        }
+
+        function cerrarImagenAmpliada() {
+            document.querySelector('.imagen-ampliada').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
